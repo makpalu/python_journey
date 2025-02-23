@@ -30,7 +30,7 @@ while True:
     best_index = -1
 
     for index, variations in enumerate(questions):
-        match = difflib.get_close_matches(user_input, variations, n=1, cutoff=0.6)
+        match = difflib.get_close_matches(user_input, variations, n=1, cutoff=0.7)
 
         if match:
             best_match = match[0]
@@ -39,4 +39,4 @@ while True:
     if best_match:
         print(answers[best_index])
     else:
-        print("Question not recognised.")
+        print("Hmm... I don't know how to respond to that 🤔. Tell me something else!")
